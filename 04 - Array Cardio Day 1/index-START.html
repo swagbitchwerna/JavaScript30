@@ -115,6 +115,22 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    // loopen
+    // bei datensatz prüfen ob dieser schon angelegt wurde
+    //  wenn nein: datensatz anlegen
+    //  wenn ja:   anzahl hochzählen
+
+    const countedCars = {};
+    for (let i = 0; i < data.length; i++) {
+      let attribute = data[i];
+      if (attribute in countedCars) {
+        countedCars[attribute] += 1;  
+      } else {
+        countedCars[attribute] = 1;
+      }
+    }
+    console.log(countedCars);
+
   </script>
 </body>
 </html>
